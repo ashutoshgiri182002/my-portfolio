@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser"
 import toast, { Toaster } from "react-hot-toast";
 import { FiSend } from 'react-icons/fi';
 
+import {motion} from 'framer-motion'
+
 const ContactForm = () => {
     const formRef = useRef();  // Use useRef to reference the form element
 
@@ -78,7 +80,12 @@ const ContactForm = () => {
         <div className="p-4 lg:w3/4" id="contact">
             <Toaster />
             <h2 className="my-8 text-center text-4xl font-4xl font-semibold tracking-tighter">Let's Connect</h2>
-            <form ref={formRef} onSubmit={handleSubmit}>  {/* Attach ref to form */}
+            <motion.form 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 ,delay:0.7 }}
+                className='space-y-4'
+            ref={formRef} onSubmit={handleSubmit}>  {/* Attach ref to form */}
                 <div className='mb-4'>
                     <input type="text"
                         id='name'
@@ -121,7 +128,7 @@ const ContactForm = () => {
                         <FiSend />
                     </div>
                 </button>
-            </form>
+            </motion.form>
         </div>
     );
 }
