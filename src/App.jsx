@@ -6,6 +6,7 @@ import Bio from './components/Bio'
 import Skills from './components/SKills'
 import WorkExperience from './components/WorkExperience'
 import EducationSections from './components/EducationSections'
+import ContactForm from './components/ContactForm'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Skills />
         <WorkExperience />
         <EducationSections />
+        <ContactForm />
       </div>
     </div>
   )
