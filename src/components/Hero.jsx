@@ -1,6 +1,6 @@
 import React from 'react'
 import { HERO } from '../constants'
-import carlImg from '../assets/ashutoshgiri.jpg'
+import carlImg from '../assets/ashutoshgiri2.png'
 import { motion } from 'framer-motion'
 
 const Hero = () => {
@@ -32,7 +32,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
-             src= {carlImg} width={550} height={550} alt="Ashutosh Giri" className='rounded-3xl' />
+             src= {carlImg} width={550} height={550} alt="Ashutosh Giri" className='rounded-3xl w-3/4 max-w-md' />
           </div>
         </motion.div>
     </section>

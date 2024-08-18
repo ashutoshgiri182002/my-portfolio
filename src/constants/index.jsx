@@ -187,27 +187,23 @@ export const EDUCATION = [
 
 export const SOCIAL_MEDIA_LINKS = [
   {
-    href: "https://x.com/",
+    href: "https://www.facebook.com/ashutoshkumar.giri.98",
     icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://x.com/",
-    icon: <FaDiscord fontSize={25} className="hover:opacity-80" />,
-  },
-  {
-    href: "https://x.com/",
+    href: "https://www.instagram.com/ashutoshgiri_official/",
     icon: <FaInstagram fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://x.com/",
+    href: "https://x.com/Ashutos46302182",
     icon: <FaXTwitter fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://github.com/",
+    href: "https://github.com/ashutoshgiri182002",
     icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/ashutosh-kumar-giri/",
     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
   },
 ];

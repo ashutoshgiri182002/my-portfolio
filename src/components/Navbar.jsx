@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo4.png'
 import { NAVIGATION_LINKS } from '../constants'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
