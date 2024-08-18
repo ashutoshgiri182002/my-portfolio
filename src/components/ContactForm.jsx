@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser"
 import toast, { Toaster } from "react-hot-toast";
 import { FiSend } from 'react-icons/fi';
 
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const ContactForm = () => {
     const formRef = useRef();  // Use useRef to reference the form element
@@ -53,26 +53,26 @@ const ContactForm = () => {
             setIsSending(true);
 
             emailjs.sendForm(
-                "service_i7q4zyw", 
-                "template_neqtt35", 
+                "service_i7q4zyw",
+                "template_neqtt35",
                 formRef.current,  // Use formRef here
                 "Wy2SjjQrn84kbTr-V"
             )
-            .then((response) => {
-                toast.success('Message sent successfully');
-                setFormData({
-                    name: '',
-                    email: '',
-                    message: ''
+                .then((response) => {
+                    toast.success('Message sent successfully');
+                    setFormData({
+                        name: '',
+                        email: '',
+                        message: ''
+                    });
+                })
+                .catch((error) => {
+                    console.log("FAILED...", error);
+                    toast.error('Failed to send message, please try again later.');
+                })
+                .finally(() => {
+                    setIsSending(false);
                 });
-            })
-            .catch((error) => {
-                console.log("FAILED...", error);
-                toast.error('Failed to send message, please try again later.');
-            })
-            .finally(() => {
-                setIsSending(false);
-            });
         }
     };
 
@@ -80,12 +80,12 @@ const ContactForm = () => {
         <div className="p-4 lg:w3/4" id="contact">
             <Toaster />
             <h2 className="my-8 text-center text-4xl font-4xl font-semibold tracking-tighter">Let's Connect</h2>
-            <motion.form 
+            <motion.form
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 ,delay:0.7 }}
+                transition={{ duration: 1, delay: 0.7 }}
                 className='space-y-4'
-            ref={formRef} onSubmit={handleSubmit}>  {/* Attach ref to form */}
+                ref={formRef} onSubmit={handleSubmit}>  {/* Attach ref to form */}
                 <div className='mb-4'>
                     <input type="text"
                         id='name'
@@ -93,7 +93,7 @@ const ContactForm = () => {
                         value={formData.name}
                         placeholder='Name'
                         onChange={handleChange}
-                        className='mb-8 w-full appearance-none rounded-lg border border-stone-50/30 bg-transparent px-3 py-2 text-sm focus:border-stone-400 focus:outline-none'
+                        className='mb- w-full appearance-none rounded-lg border border-stone-50/30 bg-transparent px-3 py-2 text-sm focus:border-stone-400 focus:outline-none'
                     />
                     {errors.name && (<p className='text-sm text-rose-800'>{errors.name}</p>)}
                 </div>
@@ -120,9 +120,8 @@ const ContactForm = () => {
                     />
                     {errors.message && (<p className='text-sm text-rose-800'>{errors.message}</p>)}
                 </div>
-                <button type='submit' className={`mb-8 w-full rounded border border-stone-50/30 bg-stone-200 px-4 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-300 ${
-                    isSending ? "cursor-not-allowed opacity-50" : ""
-                }`} disabled={isSending} >
+                <button type='submit' className={`mb-8 w-full rounded border border-stone-50/30 bg-stone-200 px-4 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-300 ${isSending ? "cursor-not-allowed opacity-50" : ""
+                    }`} disabled={isSending} >
                     <div className="flex items-center justify-center gap-2">
                         {isSending ? "Sending..." : "Send Message"}
                         <FiSend />

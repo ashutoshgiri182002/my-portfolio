@@ -31,7 +31,6 @@ const itemVariants = {
 }
 
 
-
 const Skills = () => {
     return (
         <div className="container mx-auto" id="skills">
