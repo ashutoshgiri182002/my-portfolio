@@ -24,7 +24,7 @@ const WorkExperience = () => {
                         <h3 className='text-2xl font-semibold'>{experience.title}</h3>
                         <p className='text-xl'>{experience.company}</p>
                         <p className='text-sm text-stone-300'>{experience.duration}</p>
-                        <p className='mt-2 text-base'> {experience.description}</p>
+                        <p className='mt-2 text-base' style={{ textAlign: 'justify' }}> {experience.description}</p>
                     </motion.div>
                 ))}
             </motion.div>

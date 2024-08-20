@@ -16,7 +16,7 @@ import projectImage6 from "../assets/project6.jpeg";
 
 
 
-import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaGitAlt, FaDatabase } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaGitAlt, FaDatabase } from 'react-icons/fa';
 import { SiMongodb, SiJavascript, SiD3Dotjs } from 'react-icons/si';
 import { SiCplusplus } from 'react-icons/si';
 

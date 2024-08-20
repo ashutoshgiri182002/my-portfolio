@@ -77,7 +77,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="p-4 lg:w3/4" id="contact">
+        <div className="p-4 lg:w-3/4" id="contact">
             <Toaster />
             <h2 className="my-8 text-center text-4xl font-4xl font-semibold tracking-tighter">Let's Connect</h2>
             <motion.form
@@ -93,7 +93,7 @@ const ContactForm = () => {
                         value={formData.name}
                         placeholder='Name'
                         onChange={handleChange}
-                        className='mb- w-full appearance-none rounded-lg border border-stone-50/30 bg-transparent px-3 py-2 text-sm focus:border-stone-400 focus:outline-none'
+                        className='mb-8 w-full appearance-none rounded-lg border border-stone-50/30 bg-transparent px-3 py-2 text-sm focus:border-stone-400 focus:outline-none'
                     />
                     {errors.name && (<p className='text-sm text-rose-800'>{errors.name}</p>)}
                 </div>

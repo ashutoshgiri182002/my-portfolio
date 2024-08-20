@@ -20,7 +20,7 @@ const Bio = () => {
             initial={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.8, delay : index* 0.5 }}
             whileInView={{ opacity: 1, y: 0 }}
-            key={index} className="mb-4 text-lg lg:text-xl">
+            key={index} className="mb-4 text-lg lg:text-xl" style={{ textAlign: 'justify' }}>
             {bio}
           </motion.p>
         ))}

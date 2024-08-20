@@ -19,7 +19,7 @@ const EducationSections = () => {
                     <h3 className='text-xl font-semibold'>{edu.degree}</h3>
                     <p className="text-lg">{edu.institution}</p>
                     <p className='text-sm text-stone-300'>{edu.duration}</p>
-                    <p className='mt-2'>{edu.description}</p>
+                    <p className='mt-2' style={{ textAlign: 'justify' }}>{edu.description}</p>
                 </motion.div>
             ))}
 
